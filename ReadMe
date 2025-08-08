@@ -1,74 +1,5 @@
 ## What You Need Before Starting
 https://www.geeksforgeeks.org/cloud-computing/deploying-a-web-app-on-azure-app-service-step-by-step-guide/
-AWS Account (Sign up at: https://aws.amazon.com/)
-
-Putty or Windows Terminal (for SSH into your instance)
-
-A basic app (I'll give you one!)
-
-Internet and browser
-
-## Step-by-Step Guide
-## Step 1: Create an EC2 Instance
-
-- Log in to AWS Console
-
-- Go to EC2 → click Launch Instance
-
-- Choose Amazon Linux 2 (Free tier eligible)
-
-- Choose t2.micro (also free tier)
-
-- Create a new key pair (name it e.g., mykey) and download the .pem file
-
-- Leave all defaults, then click Launch
-
-## Step 2: Connect to Your EC2 (from Windows)
-
-- Download PuTTY and PuTTYgen (https://www.putty.org/)
-
-- Use PuTTYgen to convert your .pem file to .ppk
-
-- Load your .pem
-
-- Save the private key as .ppk
-
-- Open PuTTY:
-
-- Host Name: ec2-user@<your-ec2-public-ip>
-
-- Auth → Browse and select your .ppk file
-
-- Click Open → Accept the SSH key warning
-
-## Step 3: Set Up a Web Server
-# After you log into the EC2 via PuTTY:
-
-# Update the system
-sudo yum update -y
-
-# Install Apache
-sudo yum install httpd -y
-
-# Start Apache
-sudo systemctl start httpd
-sudo systemctl enable httpd
-
-# Allow Apache through firewall
-sudo firewall-cmd --permanent --add-service=http
-sudo firewall-cmd --reload
-
-## Step 4: Upload Your Simple Web App
-You can upload a simple index.html using WinSCP or FileZilla.
-Or, create one directly
-
-## Step 5: Access Your App
-# Open your browser
-
-Go to http://<your-ec2-public-ip>
-
-You’ll see your app live!
-
 
 # Install Python & Flask
 - pip3 install flask
@@ -90,3 +21,4 @@ Port: 5000
 
 
 Source: Anywhere (0.0.0.0/0)
+
