@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form input[type="file"] {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 80%;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+h2 {
+    margin-top: 20px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.file-list {
+    list-style: none;
+    padding: 0;
+}
+
+.file-list li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.file-list li a {
+    text-decoration: none;
+    color: #007BFF;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.file-list li a:hover {
+    text-decoration: underline;
+}
+
+.file-list li button {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: auto;
+    font-size: 12px;
+}
+
+.file-list li button:hover {
+    background-color: #cc0000;
+}
